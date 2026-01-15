@@ -1,6 +1,6 @@
 <?php
 
-namespace AppKit\Amqp\JobQueue;
+namespace AppKit\JobQueue;
 
 use AppKit\StartStop\StartStopInterface;
 use AppKit\Health\HealthIndicatorInterface;

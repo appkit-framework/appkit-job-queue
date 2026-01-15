@@ -1,5 +1,5 @@
 {
-    "name": "appkit/amqp-job-queue",
+    "name": "appkit/job-queue",
     "type": "library",
     "description": "AMQP-based job queue for the AppKit framework",
     "license": "MIT",
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AppKit\\Amqp\\JobQueue\\": "src/"
+            "AppKit\\JobQueue\\": "src/"
         }
     },
     "config": {
