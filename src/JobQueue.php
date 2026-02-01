@@ -10,6 +10,7 @@ use AppKit\Amqp\AmqpNackReject;
 use AppKit\Amqp\AmqpNackRequeue;
 
 use Throwable;
+use function React\Async\async;
 
 class JobQueue implements StartStopInterface, HealthIndicatorInterface {
     const AMQP_PREFIX = 'appkit_jobqueue';
@@ -48,9 +49,9 @@ class JobQueue implements StartStopInterface, HealthIndicatorInterface {
             );
         }
 
-        $this -> amqp -> onConnect(function() {
+        $this -> amqp -> on('connect', async(function() {
             return $this -> onAmqpReconnect();
-        });
+        }));
 
         $this -> log -> info('Job queue is ready');
 
