@@ -5,6 +5,7 @@
     "license": "MIT",
     "require": {
         "appkit/amqp": "^1.0",
+        "appkit/async": "^1.0",
         "appkit/health": "^1.0",
         "appkit/json": "^1.0",
         "appkit/start-stop": "^1.0"

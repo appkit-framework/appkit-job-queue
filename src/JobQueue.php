@@ -8,9 +8,9 @@ use AppKit\Health\HealthCheckResult;
 use AppKit\Json\Json;
 use AppKit\Amqp\AmqpNackReject;
 use AppKit\Amqp\AmqpNackRequeue;
+use function AppKit\Async\async;
 
 use Throwable;
-use function React\Async\async;
 
 class JobQueue implements StartStopInterface, HealthIndicatorInterface {
     const AMQP_PREFIX = 'appkit_jobqueue';
